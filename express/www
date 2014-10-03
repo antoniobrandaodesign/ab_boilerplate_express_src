@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+// var debug 		= require('debug')('my-application');
+var app 		= require('./app.js');
+// var browserSync = require('browser-sync');
+
+app.set('port', process.env.PORT || 3000);
+
+var server = app.listen(app.get('port'), listening );
+
+function listening () 
+{
+	// if (app.get('env') === 'development')
+	// {
+	// 	// debug('Express server listening on port ' + server.address().port);
+	// 	console.log('Express server listening on port ' + server.address().port);
+	// 	browserSync({
+	// 		open: false,
+	// 		proxy: 'localhost:3000',
+	// 		files: ['../builds/**/*.{js,css}', '../src/jade/**/*.*']
+	// 	});
+	// };
+}
